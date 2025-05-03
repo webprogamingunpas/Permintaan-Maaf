@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Maaf Ya Sayang</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffe6f0;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #ff66a3;
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .heart {
+      font-size: 5em;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s ease, background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e60073;
+      transform: scale(1.05);
+    }
+
+    #reply {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: green;
+      display: none;
+    }
+
+    #sad-reply {
+      margin-top: 30px;
+      font-size: 1.3em;
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Maafin Mas, Ya Sayang!</h1>
+  <div class="heart">❤️</div>
+  <p>Mas nyesel nyuekin sayangg dan malah lebih milih main game, mas nyesel maafin mas ya sayanggg 😔</p>
+
+  <div class="button-container">
+    <button onclick="maafin()">Iya, aku maafin 😘</button>
+    <button onclick="gamaafin()">Enggak 😢</button>
+  </div>
+
+  <div id="reply">Yeay! Makasih ya sayangkuu, peluk jauhhh 🤗💕</div>
+  <div id="sad-reply">Hiks... Mas bakal terus berusaha biar Sayang maafin 😭</div>
+
+  <script>
+    function maafin() {
+      document.getElementById('reply').style.display = 'block';
+      document.getElementById('sad-reply').style.display = 'none';
+    }
+
+    function gamaafin() {
+      document.getElementById('sad-reply').style.display = 'block';
+      document.getElementById('reply').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
